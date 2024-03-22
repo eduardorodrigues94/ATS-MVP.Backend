@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  ats-api:
+    build: .
+    ports: 
+      - 8080:8080
+    links:
+      - "ats-database:database"
+
+  ats-database:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root_admin
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_data_container:/data/db
+volumes:
+  mongodb_data_container:
