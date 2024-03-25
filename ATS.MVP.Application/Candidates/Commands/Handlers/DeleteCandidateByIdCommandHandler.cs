@@ -4,7 +4,7 @@ using MediatR;
 
 namespace ATS.MVP.Application.Candidates.Commands.Handlers;
 
-internal sealed class DeleteCandidateByIdCommandHandler : IRequestHandler<DeleteCandidateByIdCommand>
+public sealed class DeleteCandidateByIdCommandHandler : IRequestHandler<DeleteCandidateByIdCommand>
 {
     private readonly ICandidateRepository _candidateRepository;
 

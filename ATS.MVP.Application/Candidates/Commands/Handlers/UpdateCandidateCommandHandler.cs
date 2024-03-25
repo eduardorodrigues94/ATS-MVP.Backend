@@ -8,7 +8,8 @@ using ATS.MVP.Domain.Common.Models.ValueObjects;
 using MediatR;
 
 namespace ATS.MVP.Application.Candidates.Commands.Handlers;
-internal class UpdateCandidateCommandHandler : IRequestHandler<UpdateCandidateCommand, Candidate>
+
+public class UpdateCandidateCommandHandler : IRequestHandler<UpdateCandidateCommand, Candidate>
 {
     private readonly ICandidateRepository _candidateRepository;
 

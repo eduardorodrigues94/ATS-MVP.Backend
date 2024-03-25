@@ -24,9 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Candidates\Validators\" />
     <Folder Include="Common\Fakes\Common\" />
-    <Folder Include="Candidates\Handlers\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -6,7 +6,7 @@ using MediatR;
 
 namespace ATS.MVP.Application.Candidates.Queries.Handlers;
 
-internal class GetCandidatesQueryHandler : IRequestHandler<GetCandidatesQuery, IEnumerable<Candidate>>
+public class GetCandidatesQueryHandler : IRequestHandler<GetCandidatesQuery, IEnumerable<Candidate>>
 {
     private readonly ICandidateRepository _candidateRepository;
 

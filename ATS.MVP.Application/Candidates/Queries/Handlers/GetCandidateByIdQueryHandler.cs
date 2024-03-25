@@ -8,7 +8,7 @@ using MediatR;
 
 namespace ATS.MVP.Application.Candidates.Queries.Handlers;
 
-internal class GetCandidateByIdQueryHandler : IRequestHandler<GetCandidateByIdQuery, Candidate>
+public class GetCandidateByIdQueryHandler : IRequestHandler<GetCandidateByIdQuery, Candidate>
 {
     private readonly ICandidateRepository _candidateRepository;
 

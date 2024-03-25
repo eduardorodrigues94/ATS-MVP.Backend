@@ -9,7 +9,7 @@ using MediatR;
 
 namespace ATS.MVP.Application.Candidates.Commands.Handlers;
 
-internal sealed class CreateCandidateCommandHandler : IRequestHandler<CreateCandidateCommand, Candidate>
+public sealed class CreateCandidateCommandHandler : IRequestHandler<CreateCandidateCommand, Candidate>
 {
     private readonly ICandidateRepository _candidatesRepository;
 
