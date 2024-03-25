@@ -4,7 +4,7 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>> where TId : notnull
 {
     public TId Id { get; protected set; }
 
-    internal Entity(TId id)
+    protected Entity(TId id)
     {
         Id = id;
     }

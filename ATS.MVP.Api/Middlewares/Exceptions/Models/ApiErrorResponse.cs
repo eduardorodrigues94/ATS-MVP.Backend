@@ -2,7 +2,7 @@
 
 namespace ATS.MVP.Api.Middlewares.Exceptions.Models;
 
-internal class ApiErrorResponse
+public class ApiErrorResponse
 {
     public int StatusCode { get; }
 
@@ -35,3 +35,4 @@ internal class ApiErrorResponse
         _errors.AddRange(messages.Select(x => new ApiErrorDetails(x)));
     }
 }
+

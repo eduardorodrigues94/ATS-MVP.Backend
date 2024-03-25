@@ -1,12 +1,12 @@
 ﻿using ATS.MVP.Domain.Candidates;
 using ATS.MVP.Domain.Candidates.Repositories;
 using ATS.MVP.Domain.Candidates.ValueObjects;
-using ATS.MVP.Domain.Common.ValueObjects;
+using ATS.MVP.Domain.Common.Models.ValueObjects;
 using MediatR;
 
 namespace ATS.MVP.Application.Candidates.Queries.Handlers;
 
-internal class GetCandidatesQueryHandler : IRequestHandler<GetCandidatesQuery, IEnumerable<Candidate>>
+public class GetCandidatesQueryHandler : IRequestHandler<GetCandidatesQuery, IEnumerable<Candidate>>
 {
     private readonly ICandidateRepository _candidateRepository;
 

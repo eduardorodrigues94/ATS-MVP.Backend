@@ -15,7 +15,7 @@ public sealed class CandidateDTO
         return new CandidateDTO(id, name, email, phoneNumber);
     }
 
-    private CandidateDTO() { }
+    public CandidateDTO() { }
 
     public Guid Id { get; set; }
     public string Name { get; set; }

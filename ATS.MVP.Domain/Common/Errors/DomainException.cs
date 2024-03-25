@@ -18,7 +18,7 @@ public class DomainException : Exception
         StatusCode = statusCode ?? _badRequest;
     }
 
-    private DomainException(string? message, Exception? innerException, int? statusCode = _badRequest) : base(message, innerException)
+    public DomainException(string? message, Exception? innerException, int? statusCode = _badRequest) : base(message, innerException)
     {
         StatusCode = statusCode ?? _badRequest;
     }
