@@ -3,7 +3,7 @@ using ATS.MVP.Domain.Candidates.Errors;
 using ATS.MVP.Domain.Candidates.Repositories;
 using ATS.MVP.Domain.Candidates.ValueObjects;
 using ATS.MVP.Domain.Common.Errors;
-using ATS.MVP.Domain.Common.ValueObjects;
+using ATS.MVP.Domain.Common.Models.ValueObjects;
 using MediatR;
 
 namespace ATS.MVP.Application.Candidates.Queries.Handlers;

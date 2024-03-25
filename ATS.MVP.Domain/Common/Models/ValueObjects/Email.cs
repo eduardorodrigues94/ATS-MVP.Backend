@@ -1,8 +1,7 @@
 ﻿using ATS.MVP.Domain.Common.Errors;
-using ATS.MVP.Domain.Common.Models;
 using System.Text.RegularExpressions;
 
-namespace ATS.MVP.Domain.Common.ValueObjects;
+namespace ATS.MVP.Domain.Common.Models.ValueObjects;
 
 public sealed class Email : ValueObject
 {
@@ -14,7 +13,7 @@ public sealed class Email : ValueObject
     {
         if (value is null || !Regex.IsMatch(value, _pattern))
         {
-            throw new DomainException(CommomErrorMessages.InvalidEmail);
+            throw new DomainException(CommonErrorMessages.InvalidEmail);
         }
 
         Value = value;
