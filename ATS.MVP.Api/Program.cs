@@ -21,6 +21,8 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 builder.Services.AddProblemDetails();
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -30,6 +32,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//No 'mundo real' precisaríamos fazer uma policy condizente com os casos de uso
+//Optei por habilitar para todo mundo pela simplicidade
+app.UseCors(policy => policy
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .AllowAnyOrigin()
+);
 
 app.AddATSMVPEndpoints();
 
