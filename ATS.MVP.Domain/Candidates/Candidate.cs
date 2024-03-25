@@ -1,6 +1,6 @@
 ﻿using ATS.MVP.Domain.Candidates.ValueObjects;
 using ATS.MVP.Domain.Common.Models;
-using ATS.MVP.Domain.Common.ValueObjects;
+using ATS.MVP.Domain.Common.Models.ValueObjects;
 
 namespace ATS.MVP.Domain.Candidates;
 

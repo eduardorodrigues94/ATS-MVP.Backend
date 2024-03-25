@@ -1,12 +1,11 @@
-﻿using ATS.MVP.Api.Middlewares.Exceptions.Interfaces;
-using ATS.MVP.Api.Middlewares.Exceptions.Models;
+﻿using ATS.MVP.Api.Middlewares.Exceptions.Models;
 using ATS.MVP.Domain.Common.Errors;
 using Microsoft.AspNetCore.Diagnostics;
 using System.Net;
 
 namespace ATS.MVP.Api.Middlewares.Exceptions;
 
-internal class GlobalExceptionHandler : IExceptionHandler, IGlobalExceptionHandler
+public class GlobalExceptionHandler : IExceptionHandler
 {
     private readonly IHostEnvironment _hostEnvironment;
 
@@ -40,13 +39,13 @@ internal class GlobalExceptionHandler : IExceptionHandler, IGlobalExceptionHandl
 
             if (_hostEnvironment.IsProduction())
             {
-                response.AddError(CommomErrorMessages.UnhandledException);
+                response.AddError(CommonErrorMessages.UnhandledException);
             }
             else
             {
-                var errorMessage = string.Join(' ', exception?.Message, exception?.InnerException);
+                var errorMessage = string.Join(' ', exception?.Message, exception?.InnerException?.Message).TrimEnd();
 
-                response.AddError(string.IsNullOrWhiteSpace(errorMessage) ? CommomErrorMessages.UnhandledException : errorMessage);
+                response.AddError(string.IsNullOrWhiteSpace(errorMessage) ? CommonErrorMessages.UnhandledException : errorMessage);
             }
         }
 

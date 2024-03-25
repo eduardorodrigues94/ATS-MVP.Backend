@@ -1,7 +1,7 @@
 ﻿using ATS.MVP.Domain.Candidates;
 using ATS.MVP.Domain.Candidates.DTOs;
 using ATS.MVP.Domain.Candidates.ValueObjects;
-using ATS.MVP.Domain.Common.ValueObjects;
+using ATS.MVP.Domain.Common.Models.ValueObjects;
 
 namespace ATS.MVP.Application.Candidates.Mappers;
 

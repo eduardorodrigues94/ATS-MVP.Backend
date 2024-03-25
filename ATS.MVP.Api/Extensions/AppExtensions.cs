@@ -6,7 +6,7 @@ namespace ATS.MVP.Api.Extensions;
 /// <summary>
 /// Métodos de extensões da aplicação
 /// </summary>
-internal static class AppExtensions
+public static class AppExtensions
 {
     /// <summary>
     /// Método de extensão para adicionar endpoints via reflection
